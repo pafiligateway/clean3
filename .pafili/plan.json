@@ -1,0 +1,44 @@
+{
+  "v": 1,
+  "at": 1793119560300,
+  "sni": "pafili-node-18b4a9.vless13trojan.workers.dev",
+  "ports": [
+    443,
+    2053,
+    2083,
+    2087,
+    2096,
+    8443
+  ],
+  "sources": [
+    {
+      "id": "a",
+      "kind": "bestcf",
+      "format": "lines",
+      "max": 20,
+      "regions": [
+        "US",
+        "DE",
+        "GB",
+        "NL",
+        "RU"
+      ],
+      "urlTemplate": "https://bestcf.pages.dev/random-region/{region}/100.txt"
+    },
+    {
+      "id": "b",
+      "kind": "proxyip",
+      "format": "markdown",
+      "max": 20,
+      "regions": [
+        "DK",
+        "DE",
+        "IT",
+        "NL",
+        "RU"
+      ],
+      "url": "https://raw.githubusercontent.com/NiREvil/vless/main/sub/ProxyIP-Daily.md",
+      "maxRisk": 100
+    }
+  ]
+}
